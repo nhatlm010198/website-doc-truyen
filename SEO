@@ -1,0 +1,21 @@
+# Tạo file sitemap.xml
+echo '<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://yourusername.github.io/website-doc-truyen/</loc>
+    <lastmod>2025-07-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- Thêm các URL khác nếu cần -->
+</urlset>' > sitemap.xml
+
+# Tạo file robots.txt
+echo 'User-agent: *
+Allow: /
+Sitemap: https://yourusername.github.io/website-doc-truyen/sitemap.xml' > robots.txt
+
+# Thêm và commit các file mới
+git add sitemap.xml robots.txt
+git commit -m "Add sitemap and robots.txt for SEO"
+git push
